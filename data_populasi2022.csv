@@ -1,40 +1,35 @@
-name;pop
-Aceh;5407.9
-Sumatera Utara;15115.2
-Sumatera Barat;5640.6
-Riau;6614.4
-Kep. Riau;2179.8
-Jambi;3631.1
-Sumatera Selatan;8657.0
-Kep. Bangka Belitung;1494.6
-Bengkulu;2060.1
-Lampung;9176.6
-DKI Jakarta;10680.0
-Jawa Barat;49405.8
-Banten;12252.0
-Jawa Tengah;37032.4
-DI Yogyakarta;3761.9
-Jawa Timur;41150.0
-Kalimantan Barat;5541.4
-Kalimantan Tengah;2741.1
-Kalimantan Selatan;4182.1
-Kalimantan Timur;3859.8
-Kalimantan Utara;727.8
-Sulawesi Utara;2659.5
-Gorontalo;1192.7
-Sulawesi Tengah;3066.1
-Sulawesi Selatan;9225.8
-Sulawesi Barat;1458.6
-Sulawesi Tenggara;2701.7
-Bali;4415.1
-Nusa Tenggara Barat;5473.7
-Nusa Tenggara Timur;5466.3
-Maluku;1881.7
-Maluku Utara;1319.3
-Papua Barat;1183.3
-Papua;4418.6
-;
-;
-;
-;
-;
+NAME_1,CC_1,pop
+Aceh,11,5407.9
+SumateraUtara,12,15115.2
+SumateraBarat,13,5640.6
+Riau,14,6614.4
+KepulauanRiau,21,2179.8
+Jambi,15,3631.1
+SumateraSelatan,16,8657.0
+BangkaBelitung,19,1494.6
+Bengkulu,17,2060.1
+Lampung,18,9176.6
+JakartaRaya,31,10680.0
+JawaBarat,32,49405.8
+Banten,36,12252.0
+JawaTengah,33,37032.4
+Yogyakarta,34,3761.9
+JawaTimur,35,41150.0
+KalimantanBarat,61,5541.4
+KalimantanTengah,62,2741.1
+KalimantanSelatan,63,4182.1
+KalimantanTimur,64,3859.8
+KalimantanUtara,64,727.8
+SulawesiUtara,71,2659.5
+Gorontalo,75,1192.7
+SulawesiTengah,72,3066.1
+SulawesiSelatan,73,9225.8
+SulawesiBarat,76,1458.6
+SulawesiTenggara,74,2701.7
+Bali,51,4415.1
+NusaTenggaraBarat,52,5473.7
+NusaTenggaraTimur,53,5466.3
+Maluku,81,1881.7
+MalukuUtara,82,1319.3
+PapuaBarat,91,1183.3
+Papua,94,4418.6

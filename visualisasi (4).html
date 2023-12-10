@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>INDAH-Indonesia Data Hub | SDGs</title>
+    <link rel="icon" type="image/x-icon" href="img/indah.svg" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- CSS TABLE -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css"
+    />
+
+    <!--Chartjs CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/visualisasi.css" rel="stylesheet" />
+
+    <!-- Load d3.js -->
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+
+  </head>
+
+  <body>
+    <div class="container-xxl bg-white p-0">
+      <!-- Spinner Start -->
+      <div
+        id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+      >
+        <div
+          class="spinner-border text-primary"
+          style="width: 3rem; height: 3rem"
+          role="status"
+        >
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      <!-- Spinner End -->
+
+      <!-- Navbar Start -->
+      <nav
+        class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0"
+      >
+        <a
+          href="index.html"
+          class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5"
+        >
+          <h1 class="gambar">
+            <img src="img/SDG.jpg" alt="" style="width: 250px" />
+          </h1>
+        </a>
+        <button
+          type="button"
+          class="navbar-toggler me-4"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="index.html" class="nav-item nav-link">Menu Utama</a>
+            <a href="index.html" class="nav-item nav-link">Beranda</a>
+            <a href="datadata.html" class="nav-item nav-link">Katalog Data</a>
+            <a href="tabeldinamis.html" class="nav-item nav-link"
+              >Tabel Dinamis</a
+            >
+            <a href="visualisasi.html" class="nav-item nav-link active"
+              >Visualisasi</a
+            >
+            <a href="inputdata.html" class="nav-item nav-link">Input Data</a>
+            <a href="monitoring.html" class="nav-item nav-link">Monitoring</a>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar End -->
+
+      <!-- Header End -->
+      <div class="container-xxl py-5 bg-dark page-header-1 mb-5">
+        <div class="container my-5 pt-5 pb-4">
+          <h1 class="display-3 text-white mb-3 animated slideInDown">
+            Tanpa Kemiskinan
+          </h1>
+          <nav aria-label="breadcrumb">
+            <p class="rincian">
+              Mengakhiri Kemiskinan Dalam Segala Bentuk di Manapun
+            </p>
+          </nav>
+        </div>
+      </div>
+      <!-- Header End -->
+
+      <!-- Navbar Start -->
+      <nav
+        class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0"
+        style="z-index: 0"
+      >
+        <a
+          href="tujuan-1.html"
+          class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5"
+        >
+          <h1 class="gambar">TUJUAN 1</h1>
+        </a>
+        <button
+          type="button"
+          class="navbar-toggler me-4"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse d-flex justify-content-center"
+          id="navbarCollapse"
+        >
+          <div class="navbar-nav mx-auto p-4 p-lg-0">
+            <a
+              href="tujuan-1.html"
+              class="nav-item nav-link"
+              style="margin: 0 50px"
+              >Target</a
+            >
+            <a
+              href="indikator.html"
+              class="nav-item nav-link"
+              style="margin: 0 50px"
+              >Indikator</a
+            >
+            <a
+              href="dataset.html"
+              class="nav-item nav-link active"
+              style="margin: 0 50px"
+              >Dataset</a
+            >
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar End -->
+
+      <!--Topside-->
+      <div class="container">
+        <div class="row mt-4">
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-header bg-success text-white">Periode</div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="tahun" class="my-1">Tahun :</label>
+                  <div class="custom-select">
+                    <select id="tahun" class="form-control">
+                      <option value="2023">2023</option>
+                      <option value="2022">2022</option>
+                      <option value="2021">2021</option>
+                      <option value="2020">2020</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="bulan" class="my-1">Bulan :</label>
+                  <div class="custom-select">
+                    <select id="bulan" class="form-control">
+                      <option value="01">Januari</option>
+                      <option value="02">Februari</option>
+                      <option value="03">Maret</option>
+                      <option value="04">April</option>
+                      <option value="05">Mei</option>
+                      <option value="06">Juni</option>
+                      <option value="07">Juli</option>
+                      <option value="08">Agustus</option>
+                      <option value="09">September</option>
+                      <option value="10">Oktober</option>
+                      <option value="11">November</option>
+                      <option value="12">Desember</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- ... (kode sebelumnya) ... -->
+
+                <!-- Button for displaying visualization -->
+                <div class="row mt-4">
+                  <div class="col-md-12 text-center">
+                    <button id="visualizeButton" class="btn btn-primary">
+                      Tampilkan Visualisasi
+                    </button>
+                  </div>
+                </div>
+
+                <!-- ... (kode setelahnya) ... -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Table Start -->
+          <div class="col-md-8">
+            <div class="card">
+              <div class="card-header bg-success text-white">Data</div>
+              <div class="card-body">
+                <div class="row">
+                  <table
+                    id="example"
+                    class="table table-striped"
+                    style="width: 100%"
+                  >
+                    <div class="container-fluid" id="table-container">
+                      <!-- This gets replaced when we have some records -->
+                    </div>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Table End -->
+        </div>
+      </div>
+      <!--End Topside-->
+
+      <!--Graphs-->
+      <div class="container">
+        <div class="row my-5">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header bg-success text-white">Histogram</div>
+              <div class="card-body">
+                <style>
+                  /* Style for hover effect on bars */
+                  .bar:hover {
+                    fill: #4CAF50; /* Green color when hovered */
+                  }
+                
+                  /* Style for tooltip */
+                  .tooltip_histogram {
+                    position: absolute;
+                    text-align: left;
+                    padding: 10px;
+                    font-size: 14px;
+                    background: rgba(255, 255, 255, 0.9);
+                    border: 1px solid #ddd;
+                    border-radius: 8px;
+                    pointer-events: none;
+                    opacity: 0;
+                    transition: opacity 0.3s;
+                  }
+                
+                  /* Style for dropdown */
+                  #columnDropdown {
+                    position: absolute;
+                    top: 75px;
+                    left: 30px;
+                    padding: 5px;
+                    font-size: 14px;
+                    border-radius: 5px;
+                  }
+                </style>
+                
+                <!-- Create a dropdown for selecting the column -->
+                <select id="columnDropdown"></select>
+                
+                <!-- Create a div where the graph will take place -->
+                <div id="my_dataviz_histogram"></div>
+                
+                <script>
+                  // set the dimensions and margins of the graph
+                  var margin = { top: 50, right: 30, bottom: 50, left: 50 },
+                    width = 460 - margin.left - margin.right,
+                    height = 400 - margin.top - margin.bottom;
+                
+                  // append the svg object to the body of the page
+                  var svg = d3
+                    .select("#my_dataviz_histogram")
+                    .append("svg")
+                    .attr("width", width + margin.left + margin.right)
+                    .attr("height", height + margin.top + margin.bottom)
+                    .append("g")
+                    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+                
+                  // get the data
+                  d3.csv("https://raw.githubusercontent.com/marchawilda/rpl/main/data_populasi.csv", function (data) {
+                
+                    // Extract the columns from the dataset
+                    var columns = Object.keys(data[0]).filter(function (key) {
+                      return key !== "NAME_1";
+                    });
+                
+                    // X axis label
+                    svg.append("text")
+                      .attr("text-anchor", "middle")
+                      .attr("transform", "translate(" + (width / 2) + "," + (height + margin.bottom - 10) + ")")
+                      .style("font-size", "14px")
+                      .text("Population (thousands)");
+                
+                    // Y axis label
+                    svg.append("text")
+                      .attr("text-anchor", "middle")
+                      .attr("transform", "rotate(-90)")
+                      .attr("y", 0 - margin.left)
+                      .attr("x", 0 - (height / 2))
+                      .attr("dy", "1em")
+                      .style("font-size", "14px")
+                      .text("Frequency");
+                
+                
+                    // Add the options to the dropdown
+                    d3.select("#columnDropdown")
+                      .selectAll("myOptions")
+                      .data(columns)
+                      .enter()
+                      .append("option")
+                      .text(function (d) { return d; })
+                      .attr("value", function (d) { return d; });
+                
+                    // X axis: scale and draw
+                    var x = d3.scaleLinear()
+                      .domain([0, 50000])
+                      .range([0, width]);
+                    svg.append("g")
+                      .attr("transform", "translate(0," + height + ")")
+                      .call(d3.axisBottom(x));
+                
+                    // set the parameters for the histogram
+                    var histogram = d3.histogram()
+                      .value(function (d) { return +d[columns[1]]; })
+                      .domain(x.domain())
+                      .thresholds(x.ticks(40));
+                
+                    // And apply this function to data to get the bins
+                    var bins = histogram(data);
+                
+                    // Y axis: scale and draw
+                    var y = d3.scaleLinear()
+                      .range([height, 0])
+                      .domain([0, d3.max(bins, function (d) { return d.length; })]);
+                    svg.append("g").attr("class", "y-axis").call(d3.axisLeft(y));
+                
+                    // Add a tooltip div.
+                    var tooltip_histogram = d3.select("#my_dataviz_histogram")
+                      .append("div")
+                      .style("opacity", 0)
+                      .attr("class", "tooltip")
+                      .style("background-color", "black")
+                      .style("color", "white")
+                      .style("border-radius", "5px")
+                      .style("padding", "10px");
+                
+                    // A function that changes the tooltip on hover
+                    var showTooltip_histogram = function (d) {
+                      tooltip_histogram.transition().duration(100).style("opacity", 1);
+                      tooltip_histogram.html("Range: " + d.x0 + " - " + d.x1 + "<br>Frequency: " + d.length)
+                        .style("left", (d3.mouse(this)[0] + 20) + "px")
+                        .style("top", (d3.mouse(this)[1]) + "px");
+                    };
+                
+                    var moveTooltip_histogram = function (d) {
+                      tooltip_histogram.style("left", (d3.mouse(this)[0] + 20) + "px")
+                        .style("top", (d3.mouse(this)[1]) + "px");
+                    };
+                
+                    // A function that changes the tooltip when leaving a point
+                    var hideTooltip_histogram = function (d) {
+                      tooltip_histogram.transition().duration(100).style("opacity", 0);
+                    };
+                
+                    // append the bar rectangles to the svg element
+                    svg.selectAll("rect")
+                      .data(bins)
+                      .enter()
+                      .append("rect")
+                      .attr("x", 1)
+                      .attr("transform", function (d) { return "translate(" + x(d.x0) + "," + y(d.length) + ")"; })
+                      .attr("width", function (d) { return x(d.x1) - x(d.x0) - 1; })
+                      .attr("height", function (d) { return height - y(d.length); })
+                      .attr("class", "bar") // Add a class for styling
+                      // Show tooltip on hover
+                      .on("mouseover", showTooltip_histogram)
+                      .on("mousemove", moveTooltip_histogram)
+                      .on("mouseleave", hideTooltip_histogram);
+                
+                    // When the dropdown changes, update the chart
+                    d3.select("#columnDropdown").on("change", function () {
+                      var selectedColumn = d3.select(this).property("value");
+                      updateChart(selectedColumn);
+                    });
+                
+                    // Function to update the chart based on selected column
+                    function updateChart(selectedColumn) {
+                      // Update histogram based on selected column
+                      histogram.value(function (d) { return +d[selectedColumn]; });
+                      bins = histogram(data);
+                
+                      // Update Y axis
+                      y.domain([0, d3.max(bins, function (d) { return d.length; })]);
+                      svg.select(".y-axis").call(d3.axisLeft(y));
+                
+                      // Update bars
+                      svg.selectAll(".bar")
+                        .data(bins)
+                        .transition()
+                        .duration(500)
+                        .attr("x", 1)
+                        .attr("transform", function (d) { return "translate(" + x(d.x0) + "," + y(d.length) + ")"; })
+                        .attr("width", function (d) { return x(d.x1) - x(d.x0) - 1; })
+                        .attr("height", function (d) { return height - y(d.length); });
+                    }
+                  });
+                </script>                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header bg-success text-white">Bar Chart</div>
+                <div class="card-body">
+                  <!-- Initialize a select button for selecting the year -->
+                  <select id="yearDropdown_bar"></select>
+
+                  <!-- Create a div where the graph will take place -->
+                  <div id="my_dataviz_bar"></div>
+
+                  <!-- Color Scale -->
+                  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+                  <script>
+                    // set the dimensions and margins of the graph
+                    var margin = { top: 10, right: 30, bottom: 120, left: 80 },
+                      width = 760 - margin.left - margin.right,
+                      height = 400 - margin.top - margin.bottom;
+
+                    // append the svg object to the body of the page
+                    var svg = d3
+                      .select("#my_dataviz_bar")
+                      .append("svg")
+                      .attr("width", width + margin.left + margin.right)
+                      .attr("height", height + margin.top + margin.bottom)
+                      .append("g")
+                      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+                    //Read the data
+                    d3.csv("https://raw.githubusercontent.com/marchawilda/rpl/main/data_populasi.csv", function (data) {
+                      // Extract the years from the dataset
+                      var years = Object.keys(data[0]).filter(function (key) {
+                        return key !== "NAME_1";
+                      });
+
+                      // add the options to the button
+                      d3.select("#yearDropdown_bar")
+                        .selectAll("myOptions")
+                        .data(years)
+                        .enter()
+                        .append("option")
+                        .text(function (d) {
+                          return d;
+                        }) // text showed in the menu
+                        .attr("value", function (d) {
+                          return d;
+                        }); // corresponding value returned by the button
+
+                      // A color scale: one color for each year
+                      var myColor = d3.scaleOrdinal().domain(years).range(d3.schemeSet2);
+
+                      // Add X axis --> it is a date format
+                      var x = d3
+                        .scaleBand()
+                        .domain(data.map(function (d) {
+                          return d.NAME_1;
+                        }))
+                        .range([0, width])
+                        .padding(0.1);
+
+                      svg
+                        .append("g")
+                        .attr("transform", "translate(0," + height + ")")
+                        .call(d3.axisBottom(x))
+                        .selectAll("text")
+                        .attr("transform", "translate(-10,0)rotate(-45)")
+                        .style("text-anchor", "end")
+                        .attr("font-size", "12px");
+
+                      // Add Y axis
+                      var y = d3.scaleLinear().domain([0, d3.max(data, function (d) { return +d3.max(years, function (y) { return d[y]; }); })]).range([height, 0]);
+
+                      svg.append("g").call(d3.axisLeft(y));
+
+                      // Add X axis label
+                      svg.append("text")
+                        .attr("text-anchor", "middle")
+                        .attr("transform", "translate(" + width / 2 + "," + (height + margin.bottom - 10) + ")")
+                        .style("font-size", "14px")
+                        .text("Province");
+
+                      // Add Y axis label
+                      svg.append("text")
+                        .attr("text-anchor", "middle")
+                        .attr("transform", "rotate(-90)")
+                        .attr("y", 20 - margin.left)
+                        .attr("x", 0 - height / 2)
+                        .style("font-size", "14px")
+                        .text("Population (in thousands)");
+
+                      // Initialize bar chart with the first year
+                      var bars = svg
+                        .selectAll("mybar")
+                        .data(data)
+                        .enter()
+                        .append("rect")
+                        .attr("x", function (d) {
+                          return x(d.NAME_1);
+                        })
+                        .attr("y", function (d) {
+                          return y(d[years[0]]);
+                        })
+                        .attr("width", x.bandwidth())
+                        .attr("height", function (d) {
+                          return height - y(d[years[0]]);
+                        })
+                        .attr("fill", function (d) {
+                          return myColor(years[0]);
+                        })
+                        .style("opacity", 0.7)
+                        .on("mouseover", function (d) {
+                          d3.select(this).style("opacity", 1);
+                        })
+                        .on("mouseleave", function (d) {
+                          d3.select(this).style("opacity", 0.7);
+                        })
+                        .on("mousemove", function (d) {
+                          tooltip_bar
+                            .html("Province: " + d.NAME_1 + "<br>Population: " + (d[years[2]] || 0) + " thousand people")
+                            .style("left", d3.event.pageX + "px")
+                            .style("top", d3.event.pageY - 28 + "px");
+                        });
+
+                      // Add tooltip element
+                      var tooltip_bar = d3.select("body").append("div").attr("class", "tooltip_bar").style("opacity", 0);
+
+                      // A function that update the chart
+                      function update(selectedYear) {
+                        // Give new data to update bars
+                        bars
+                          .data(data)
+                          .transition()
+                          .duration(1000)
+                          .attr("y", function (d) {
+                            return y(d[selectedYear]);
+                          })
+                          .attr("height", function (d) {
+                            return height - y(d[selectedYear]);
+                          })
+                          .attr("fill", function (d) {
+                            return myColor(selectedYear);
+                          });
+
+                          // Show tooltip with additional information
+                        tooltip_bar.transition()
+                            .duration(1000)
+                            .style("opacity", .9);
+                          tooltip_bar.html("Province: " + d.NAME_1 + "<br>Population: " + (d[[selectedYear]] || 0) + " thousand people")
+                            .style("left", (d3.event.pageX) + "px")
+                            .style("top", (d3.event.pageY - 28) + "px");
+                      }
+
+                      // When the button is changed, run the updateChart function
+                      d3.select("#yearDropdown_bar").on("change", function (d) {
+                        // recover the option that has been chosen
+                        var selectedOption = d3.select(this).property("value");
+                        // run the updateChart function with this selected option
+                        update(selectedOption);
+                      });
+                    });
+                  </script>
+
+                  <style>
+                    /* Style for hover effect on bars */
+                    rect:hover {
+                      fill: #45a049; /* Darker green color on hover */
+                    }
+
+                    /* Style for tooltip */
+                    .tooltip_bar {
+                      position: absolute;
+                      text-align: left;
+                      padding: 10px;
+                      font-size: 14px;
+                      background: rgba(255, 255, 255, 0.9);
+                      border: 1px solid #ddd;
+                      border-radius: 8px;
+                      pointer-events: none;
+                      opacity: 0;
+                      transition: opacity 0.3s;
+                    }
+                  </style>
+
+                </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header bg-success text-white">Map Chart</div>
+              <div class="card-body">
+                  <!-- Create an element where the map will take place -->
+                <svg id="my_dataviz_peta" width="700" height="300"></svg>
+
+                <!-- Add tooltip element -->
+                <div id="tooltip_peta" class="tooltip_peta">
+                  <div class="tooltip_peta-header"></div>
+                  <div class="tooltip_peta-body"></div>
+                </div>
+
+                <!-- Add dropdown for selecting the year -->
+                <select id="yearDropdown_peta">
+                  <option value="pop20">2020</option>
+                  <option value="pop21">2021</option>
+                  <option value="pop22">2022</option>
+                </select>
+
+                <style>
+                    /* Style for the dropdown button */
+                    #yearDropdown_peta {
+                    position: absolute;
+                    top: 75px; /* Sesuaikan dengan posisi yang diinginkan */
+                    left: 20px;
+                    font-size: 16px;
+                    padding: 10px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    background-color: #4CAF50; /* Warna hijau */
+                    color: #fff; /* Warna teks putih */
+                    cursor: pointer;
+                    }
+
+                    /* Style for dropdown options */
+                    #yearDropdown_peta option {
+                    font-size: 16px;
+                    background-color: #4CAF50; /* Warna hijau */
+                    color: #fff; /* Warna teks putih */
+                    }
+
+                    /* Style for hover effect on dropdown options */
+                    #yearDropdown_peta option:hover {
+                    background-color: #45a049; /* Warna hijau yang sedikit lebih gelap saat dihover */
+                    }
+
+                  .tooltip_peta {
+                    position: absolute;
+                    text-align: left;
+                    padding: 10px;
+                    font-size: 14px;
+                    background: rgba(255, 255, 255, 0.9);
+                    border: 1px solid #ddd;
+                    border-radius: 8px;
+                    pointer-events: none;
+                    opacity: 0;
+                    transition: opacity 0.3s;
+                    left: 20px;
+                  }
+
+                  .tooltip_peta-header {
+                    font-size: 16px;
+                    font-weight: bold;
+                    margin-bottom: 6px;
+                  }
+
+                  .tooltip_peta-body {
+                    color: #666;
+                  }
+
+                  .Provinsi {
+                    transition: opacity 0.3s, stroke 0.3s;
+                  }
+                </style>
+
+                <script>
+                  // The svg
+                  var svg = d3.select("svg"),
+                      width = +svg.attr("width"),
+                      height = +svg.attr("height");
+
+                  // Map and projection
+                  var path = d3.geoPath();
+                  var projection = d3.geoMercator()
+                    .scale(500)
+                    .center([150, 18])
+                    .translate([width/1.2, height/15]);
+
+                  // Data and color scale
+                  var data = d3.map();
+                  var colorScale = d3.scaleThreshold()
+                    .domain([600, 1200, 1800, 2400, 3000, 3600, 4200, 4800])
+                    .range(d3.schemeGreens[9]);
+
+                  // Load external data and boot
+                  d3.queue()
+                    .defer(d3.json, "https://raw.githubusercontent.com/marchawilda/rpl/main/gadm41_IDN_1_fix.json")
+                    .defer(d3.csv, "https://raw.githubusercontent.com/marchawilda/rpl/main/data_populasi.csv", function(d) { data.set(d.CC_1, +d.pop20); })
+                    .await(ready);
+
+                  function ready(error, topo) {
+
+                    // Add tooltip element
+                    var tooltip_peta = d3.select("body").append("div")
+                        .attr("class", "tooltip_peta")
+                        .style("opacity", 0);
+
+                    let mouseOver = function(d) {
+                      d3.selectAll(".Provinsi")
+                        .transition()
+                        .duration(200)
+                        .style("opacity", .5)
+                      d3.select(this)
+                        .transition()
+                        .duration(200)
+                        .style("opacity", .5)
+                        .style("stroke", "blue")
+
+                      // Tampilkan tooltip dengan informasi tambahan
+                      tooltip_peta.transition()
+                          .duration(200)
+                          .style("opacity", .9);
+                        tooltip_peta.html("Provinsi: " + d.properties.NAME_1 + "<br>Populasi: " + (data.get(d.id) || 0) + " ribu jiwa")
+                          .style("left", (d3.event.pageX) + "px")
+                          .style("top", (d3.event.pageY - 28) + "px");
+                    }
+
+                    let mouseLeave = function(d) {
+                      d3.selectAll(".Provinsi")
+                        .transition()
+                        .duration(200)
+                        .style("opacity", .8)
+                      d3.select(this)
+                        .transition()
+                        .duration(200)
+                        .style("stroke", "transparent")
+
+                      // Sembunyikan tooltip
+                      tooltip.transition()
+                          .duration(500)
+                          .style("opacity", 0);
+                    }
+
+                    // Fungsi mousemove
+                    let mouseMove = function(d) {
+                        tooltip_peta.style("left", (d3.event.pageX) + "px")
+                          .style("top", (d3.event.pageY - 28) + "px");
+                      }
+
+                    // Draw the map
+                    svg.append("g")
+                      .selectAll("path")
+                      .data(topo.features)
+                      .enter()
+                      .append("path")
+                        // draw each province
+                        .attr("d", d3.geoPath()
+                          .projection(projection)
+                        )
+                        // set the color of each province
+                        .attr("fill", function (d) {
+                          d.total = data.get(d.id) || 0; // 
+                          return colorScale(d.total);
+                        })
+                        .style("stroke", "transparent")
+                        .attr("class", function(d){ return "Provinsi" } )
+                        .style("opacity", .8)
+                        .on("mouseover", mouseOver )
+                        .on("mouseleave", mouseLeave )
+                        .on("mousemove", mouseMove); // Tambahkan event mousemove
+
+                    // When the dropdown changes, run the updateMap function
+                    d3.select("#yearDropdown_peta").on("change", function() {
+                        var selectedYear = d3.select(this).property("value");
+                        updateMap(selectedYear);
+                    });
+
+                    // Initial map rendering
+                    updateMap("pop20");
+                  }
+
+                  function updateMap(selectedYear) {
+                    // Update map based on selected year
+                    var newData = d3.map();
+                    var newColorScale = d3.scaleThreshold()
+                        .domain([600, 1200, 1800, 2400, 3000, 3600, 4200, 4800])
+                        .range(d3.schemeGreens[9]);
+
+                    d3.queue()
+                      .defer(d3.json, "https://raw.githubusercontent.com/marchawilda/rpl/main/gadm41_IDN_1_fix.json")
+                      .defer(d3.csv, "https://raw.githubusercontent.com/marchawilda/rpl/main/data_populasi.csv", function(d) { newData.set(d.CC_1, +d[selectedYear]); })
+                      .await(function(error, topo) {
+                        // Assign the new data and color scale
+                        data = newData;
+                        colorScale = newColorScale;
+
+                        // Update the map based on the new data
+                        svg.selectAll(".Provinsi")
+                          .attr("fill", function(d) {
+                            d.total = data.get(d.id) || 0;
+                            return colorScale(d.total);
+                          });
+                      });
+                  }
+                </script>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header bg-success text-white">Line Chart</div>
+              <div class="card-body">
+                <!-- Initialize a select button -->
+                <select id="selectButton"></select>
+
+                <!-- Create a div where the graph will take place -->
+                <div id="my_dataviz_line"></div>
+
+                <!-- Color Scale -->
+                <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+                <style>
+                  /* Add some basic styling */
+                  #my_dataviz_line {
+                    font-family: 'Arial', sans-serif;
+                  }
+
+                  .line {
+                    fill: none;
+                    stroke-width: 3;
+                  }
+
+                  .tooltip_line {
+                    position: absolute;
+                    background: #fff;
+                    border: 1px solid #ddd;
+                    padding: 10px;
+                    font-size: 12px;
+                    opacity: 0;
+                    pointer-events: none;
+                  }
+
+                  /* Style the select button */
+                  #selectButton {
+                    font-size: 14px;
+                    padding: 8px;
+                    margin-top: 10px;
+                    border-radius: 4px;
+                  }
+
+                  /* Style the axis titles and labels */
+                  .axis-title {
+                    font-size: 14px;
+                    font-weight: bold;
+                  }
+
+                  .axis-label {
+                    font-size: 14px;
+                    font-weight: bold;
+                  }
+                </style>
+
+                <script>
+
+                  // set the dimensions and margins of the graph
+                  var margin = {top: 20, right: 100, bottom: 40, left: 70},
+                      width = 600 - margin.left - margin.right,
+                      height = 400 - margin.top - margin.bottom;
+
+                  // append the svg object to the body of the page
+                  var svg = d3.select("#my_dataviz_line")
+                    .append("svg")
+                      .attr("width", width + margin.left + margin.right)
+                      .attr("height", height + margin.top + margin.bottom)
+                    .append("g")
+                      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+                  // Read the data
+                  d3.csv("https://raw.githubusercontent.com/marchawilda/rpl/main/data_populasi.csv", function(data) {
+
+                      // Transpose the dataset
+                      var transposedData = d3.transpose(data.map(function(d) {
+                        return Object.values(d).slice(2); // Assuming the first two columns are not needed in the transpose
+                      }));
+
+                      // List of groups (here I have one group per column)
+                      var allGroup = data.map(function(d) { return d.NAME_1; });
+
+                      // Add the options to the button
+                      d3.select("#selectButton")
+                        .selectAll('myOptions')
+                          .data(allGroup)
+                          .enter()
+                          .append('option')
+                          .text(function (d) { return d; }) // text showed in the menu
+                          .attr("value", function (d) { return d; }) // corresponding value returned by the button
+
+                      // A color scale: one color for each group
+                      var myColor = d3.scaleOrdinal()
+                        .domain(allGroup)
+                        .range(d3.schemeSet2);
+
+                      // Find the maximum value in the dataset
+                      var maxValue = d3.max(transposedData.flat());
+
+                      // Add X axis
+                      var x = d3.scaleBand()
+                        .domain(["pop20", "pop21", "pop22"])
+                        .range([0, width])
+                        .padding(0.1);
+
+                      svg.append("g")
+                        .attr("transform", "translate(0," + height + ")")
+                        .call(d3.axisBottom(x));
+
+                      // Add Y axis
+                      var y = d3.scaleLinear()
+                        .domain([0, 50000])
+                        .range([height, 0]);
+
+                      svg.append("g")
+                        .call(d3.axisLeft(y));
+
+                      // Add X axis title
+                      svg.append("text")
+                        .attr("class", "axis-title")
+                        .attr("text-anchor", "middle")
+                        .attr("transform", "translate(" + (width / 2) + "," + (height + margin.bottom) + ")")
+                        .text("Tahun");
+
+                      // Add Y axis title
+                      svg.append("text")
+                        .attr("class", "axis-title")
+                        .attr("text-anchor", "middle")
+                        .attr("transform", "rotate(-90)")
+                        .attr("y", 0 - margin.left)
+                        .attr("x", 0 - (height / 2))
+                        .text("Population");
+
+                      // Add Y axis label
+                      svg.append("text")
+                        .attr("class", "axis-label")
+                        .attr("text-anchor", "middle")
+                        .attr("transform", "rotate(-90)")
+                        .attr("y", 0 - margin.left + 20)
+                        .attr("x", 0 - (height / 2))
+                        .text("Jumlah Populasi (ribu)");
+
+                      // Initialize line with group a
+                      var line = svg
+                        .append('g')
+                        .append("path")
+                          .datum(transposedData)
+                          .attr("class", "line")
+                          .attr("d", d3.line()
+                            .x(function(_, i) { return x(["pop20", "pop21", "pop22"][i]) + x.bandwidth() / 2; })
+                            .y(function(d) { return y(+d[0]) })
+                          )
+                          .attr("stroke", function(d){ return myColor(allGroup[0]) });
+
+                      // A function that updates the chart
+                      function update(selectedGroup) {
+
+                        // Create new data with the selection
+                        var dataFilter = transposedData.map(function(d, i){
+                          return {time: i, value: d[allGroup.indexOf(selectedGroup)]};
+                        });
+
+                        // Give this new data to update the line
+                        line
+                          .datum(dataFilter)
+                          .transition()
+                          .duration(1000)
+                          .attr("d", d3.line()
+                            .x(function(_, i) { return x(["pop20", "pop21", "pop22"][i]) + x.bandwidth() / 2; })
+                            .y(function(d) { return y(+d.value) })
+                          )
+                          .attr("stroke", function(d){ return myColor(selectedGroup) });
+                      }
+
+                      // When the button is changed, run the updateChart function
+                      d3.select("#selectButton").on("change", function() {
+                          // Recover the option that has been chosen
+                          var selectedOption = d3.select(this).property("value");
+                          // Run the updateChart function with this selected option
+                          update(selectedOption);
+                      });
+
+                  });
+
+                </script>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-12 text-center">
+          <button id="downloadButton" class="btn btn-primary">
+            Download Visualisasi
+          </button>
+        </div>
+      </div>
+
+      <!--End Graphs-->
+
+      <!-- Footer Start -->
+      <div
+        class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn"
+        data-wow-delay="0.1s"
+      >
+        <div class="container py-5">
+          <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+              <h5 class="text-white mb-4">Layanan Disediakan Oleh:</h5>
+              <a href="bps.go.id"
+                ><img src="img/bps.png" alt="BPS" style="width: 250px"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="copyright">
+            <div class="row">
+              <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                &copy;
+                <a class="border-bottom" href="bps.go.id"
+                  >Badan Pusat Statistik</a
+                >, All Right Reserved.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer End -->
+
+      <!-- Back to Top -->
+      <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+        ><i class="bi bi-arrow-up"></i
+      ></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+      // Replace this with your sheet2api API URL
+      // var apiUrl =
+      //   "https://booking.kai.id/api/stations2";
+      // Replace this with the spreadsheet column you would like to be able to filter by
+      // var filterBy = 'Category';
+
+      var dataTable = null;
+
+      function csvToJson(csv) {
+        const lines = csv.split("\n");
+        const result = [];
+        const headers = lines[0].split(",");
+
+        for (let i = 1; i < lines.length; i++) {
+          const obj = {};
+          const currentLine = lines[i].split(",");
+
+          for (let j = 0; j < headers.length; j++) {
+            obj[headers[j]] = currentLine[j];
+          }
+
+          result.push(obj);
+        }
+
+        return result; // Mengembalikan array objek JSON, bukan JSON string
+      }
+      var Global = null;
+
+      // Contoh penggunaan
+      const csvURL = `https://raw.githubusercontent.com/BagasSetyawann/cobaIndah/main/dummy.csv`;
+
+      // Mengambil data dari URL menggunakan fetch
+      fetch(csvURL)
+        .then((response) => response.text()) // Mengambil teks dari respons
+        .then((csvData) => {
+          // Mengonversi teks CSV menjadi JSON
+          Global = csvToJson(csvData);
+          console.log(Global); // Data dalam bentuk objek JSON
+          // Lakukan sesuatu dengan data JSON di sini
+        })
+        .catch((error) => {
+          console.error("Error fetching the CSV data:", error);
+        });
+      // Called once the page has loaded
+      document.addEventListener("DOMContentLoaded", function (event) {
+        loadData(Global);
+        elementReady("#table").then((table) => {
+          dataTable = $(table).DataTable({
+            paging: false,
+            select: true,
+            searching: true,
+          });
+        });
+      });
+    </script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    <!-- <script>
+      document
+        .getElementById("visualizeButton")
+        .addEventListener("click", function () {
+          var ctx1 = document.getElementById("myChart1").getContext("2d");
+          var myChart1 = new Chart(ctx1, {
+            type: "pie",
+            data: {
+              labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+              datasets: [
+                {
+                  label: "Products",
+                  data: [12, 19, 3, 5, 2, 3],
+                  backgroundColor: [
+                    "rgba(255, 99, 132, 1)",
+                    "rgba(54, 162, 235, 1)",
+                    "rgba(255, 206, 86, 1)",
+                    "rgba(75, 192, 192, 1)",
+                    "rgba(153, 102, 255, 1)",
+                    "rgba(255, 159, 64, 1)",
+                  ],
+                  borderColor: [
+                    "rgba(255, 99, 132, 1)",
+                    "rgba(54, 162, 235, 1)",
+                    "rgba(255, 206, 86, 1)",
+                    "rgba(75, 192, 192, 1)",
+                    "rgba(153, 102, 255, 1)",
+                    "rgba(255, 159, 64, 1)",
+                  ],
+                  borderWidth: 1,
+                },
+              ],
+            },
+            options: {
+              scales: {
+                yAxes: [
+                  {
+                    ticks: {
+                      beginAtZero: true,
+                    },
+                  },
+                ],
+              },
+            },
+          });
+
+          var ctx2 = document.getElementById("myChart2").getContext("2d");
+          var myChart2 = new Chart(ctx2, {
+            type: "bar",
+            data: {
+              labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+              datasets: [
+                {
+                  label: "Products",
+                  data: [12, 19, 3, 5, 2, 3],
+                  backgroundColor: [
+                    "rgba(255, 99, 132, 0.2)",
+                    "rgba(54, 162, 235, 0.2)",
+                    "rgba(255, 206, 86, 0.2)",
+                    "rgba(75, 192, 192, 0.2)",
+                    "rgba(153, 102, 255, 0.2)",
+                    "rgba(255, 159, 64, 0.2)",
+                  ],
+                  borderColor: [
+                    "rgba(255, 99, 132, 1)",
+                    "rgba(54, 162, 235, 1)",
+                    "rgba(255, 206, 86, 1)",
+                    "rgba(75, 192, 192, 1)",
+                    "rgba(153, 102, 255, 1)",
+                    "rgba(255, 159, 64, 1)",
+                  ],
+                  borderWidth: 1,
+                },
+              ],
+            },
+            options: {
+              scales: {
+                yAxes: [
+                  {
+                    ticks: {
+                      beginAtZero: true,
+                    },
+                  },
+                ],
+              },
+            },
+          });
+          
+          var ctx3 = document.getElementById("myChart3").getContext("2d");
+          var myChart3 = new Chart(ctx3, {
+            type: "pie",
+            data: {
+              labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+              datasets: [
+                {
+                  label: "Products",
+                  data: [1, 9, 3, 5, 2, 7],
+                  backgroundColor: [
+                    "rgba(255, 99, 132, 1)",
+                    "rgba(54, 162, 235, 1)",
+                    "rgba(255, 206, 86, 1)",
+                    "rgba(75, 192, 192, 1)",
+                    "rgba(153, 102, 255, 1)",
+                    "rgba(255, 159, 64, 1)",
+                  ],
+                  borderColor: [
+                    "rgba(255, 99, 132, 1)",
+                    "rgba(54, 162, 235, 1)",
+                    "rgba(255, 206, 86, 1)",
+                    "rgba(75, 192, 192, 1)",
+                    "rgba(153, 102, 255, 1)",
+                    "rgba(255, 159, 64, 1)",
+                  ],
+                  borderWidth: 1,
+                },
+              ],
+            },
+            options: {
+              scales: {
+                yAxes: [
+                  {
+                    ticks: {
+                      beginAtZero: true,
+                    },
+                  },
+                ],
+              },
+            },
+          });
+
+          var ctx4 = document.getElementById("myChart4").getContext("2d");
+          var myChart4 = new Chart(ctx4, {
+            type: "pie",
+            data: {
+              labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+              datasets: [
+                {
+                  label: "Products",
+                  data: [11, 10, 3, 9, 2, 3],
+                  backgroundColor: [
+                    "rgba(255, 99, 132, 1)",
+                    "rgba(54, 162, 235, 1)",
+                    "rgba(255, 206, 86, 1)",
+                    "rgba(75, 192, 192, 1)",
+                    "rgba(153, 102, 255, 1)",
+                    "rgba(255, 159, 64, 1)",
+                  ],
+                  borderColor: [
+                    "rgba(255, 99, 132, 1)",
+                    "rgba(54, 162, 235, 1)",
+                    "rgba(255, 206, 86, 1)",
+                    "rgba(75, 192, 192, 1)",
+                    "rgba(153, 102, 255, 1)",
+                    "rgba(255, 159, 64, 1)",
+                  ],
+                  borderWidth: 1,
+                },
+              ],
+            },
+            options: {
+              scales: {
+                yAxes: [
+                  {
+                    ticks: {
+                      beginAtZero: true,
+                    },
+                  },
+                ],
+              },
+            },
+          });
+
+        }); -->
+
+      // function setupNavListener() {
+      //     elementReady('#filters-nav').then((el) => {
+      //         $("#filters-nav .nav-link").on("click", function () {
+      //             $("#filters-nav").find(".active").removeClass("active");
+      //             $(this).addClass("active");
+      //         });
+      //     });
+      // }
+
+      function elementReady(selector) {
+        return new Promise((resolve, reject) => {
+          const el = document.querySelector(selector);
+          if (el) {
+            resolve(el);
+          }
+          new MutationObserver((mutationRecords, observer) => {
+            // Query for elements matching the specified selector
+            Array.from(document.querySelectorAll(selector)).forEach(
+              (element) => {
+                resolve(element);
+                //Once we have resolved we don't need the observer anymore.
+                observer.disconnect();
+              }
+            );
+          }).observe(document.documentElement, {
+            childList: true,
+            subtree: true,
+          });
+        });
+      }
+
+      function loadData(jsonData) {
+        this.rows = jsonData;
+        this.cols = Object.keys(this.rows[1]);
+        this.filters = [];
+
+        for (var row in this.rows) {
+          var value = this.rows[row];
+          if (!this.filters.includes(value)) {
+            this.filters.push(value);
+          }
+        }
+
+        outputRows(this.rows);
+        // outputFilters();
+      }
+
+      function outputRows(rows) {
+        var template = Handlebars.compile(
+          document.getElementById("table-template").innerHTML
+        );
+        document.getElementById("table-container").innerHTML = template({
+          rows: rows,
+          cols: cols,
+        });
+      }
+
+      // function outputFilters() {
+      //     var template = Handlebars.compile(document.getElementById("filters-template").innerHTML);
+      //     document.getElementById('filters-container').innerHTML = template(this.filters);
+      // }
+
+      function filterRows(filterValue) {
+        dataTable.search(filterValue).draw();
+      }
+    </script>
+
+    <!-- Template for the menu / filters -->
+    <!-- <script id="filters-template" type="text/x-handlebars-template">
+  
+          <div class="container mb-3">
+              <ul class="nav nav-center nav-pills" id="filters-nav">
+                  <li class="nav-item mx-auto">
+                  <a class="nav-link active"  href="#" onclick="filterRows('');">All</a>
+                  </li>
+                  {{#each this as |filterValue|}}
+                  <li class="nav-item mx-auto">
+                      <a class="nav-link" href="#" onclick="filterRows('{{filterValue}}');">{{filterValue}}</a>
+                  </li>
+                  {{/each}}
+              </ul>
+          </div>
+      </script> -->
+
+    <!-- Template for the table -->
+    <script id="table-template" type="text/x-handlebars-template">
+      <table id="table" class="table table-hover mb-4">
+        <thead class="thead-light">
+          <tr>
+            {{#each this.cols as |col|}}
+              <th>{{col}}</th>
+            {{/each}}
+          </tr>
+        </thead>
+        <tbody>
+          {{#each this.rows as |records|}}
+            <tr>
+              {{#each records as |record|}}
+                <td>{{record}}</td>
+              {{/each}}
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </script>
+    <!-- Sebelum penutup </body> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- TABLE JS -->
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#example").DataTable();
+      });
+    </script>
+  </body>
+</html>
